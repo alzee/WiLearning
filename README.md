@@ -1,10 +1,6 @@
-![Wi2_Whiteboard](res/wi2.gif)
-----
-[English](README-en.md)
-
-[演示系统](https://rtc.liweix.com/admin)
-# WiLearning
-WiLearning 是一个开源、免费的在线课堂及视频会议系统，具备以下功能：
+[login](https://meeting.orcasmart.com/admin)
+# Orca Meeting
+视频会议系统，具备以下功能：
 * 多人视频会议 - 进行多人实时音视频及聊天
 * 共享桌面 - 支持共享桌面，支持在共享桌面和课件间进行切换
 * 共享媒体 - 共享本地音频或视频，本地音视频可拖动，实时同步
@@ -19,16 +15,12 @@ WiLearning 是一个开源、免费的在线课堂及视频会议系统，具备
 * 全终端支持 - 支持Windows/Mac/Android/IOS平台，支持Chrome/Firfox/Safari浏览器，自动适配终端环境
 * 支持在微信中使用（Android）
 
-WiLearning使用了WebRTC技术，服务器端使用Typescript + Nodejs + MediaSoup开发,App端使用Angular + Ionic.
+使用了WebRTC技术，服务器端使用Typescript + Nodejs + MediaSoup开发,App端使用Angular + Ionic.
 
 # 安装
 * 服务器及客户端代码支持部署在Linux/Mac操作系统,要求Nodejs版本大于v12
 * 服务器主机有公网IP + 域名 + SSL证书
 
-# 代码
-```
-git clone https://github.com/wistingcn/WiLearning
-```
 * 注意：客户端连接服务器地址定义在 app/src/app/config.ts ，编译代码前请先修改服务器地址，连接到默认地址将会出现“房间不存在”的错误！
 
 ## 安装cnpm
@@ -93,7 +85,3 @@ https://[你的公网IP地址]/admin/
 * 推荐使用自己的域名和证书，在aliyun可以申请免费证书
 * 当访问出现问题时，在浏览器打开开发者工具，在控制台(Console)里查看出错原因
 * 未能解决的问题，请提交issue，并附上问题截图
-
-# WiLearning 交流及技术支持
-* 加微信：bjliwei，备注：进群，我拉你入微信群
-* 加QQ群：1043056267
