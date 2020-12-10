@@ -19,6 +19,7 @@ import { Observable } from 'rxjs';
 import { throttleTime } from 'rxjs/operators';
 
 export enum DrawtoolType {
+  path = 'path',
   free = 'free',
   select = 'select',
   text = 'text',
@@ -168,6 +169,7 @@ export class DrawtoolService {
           this.recting = undefined;
           this.document.sendSyncDocInfo();
           break;
+        case DrawtoolType.path:
         case DrawtoolType.free :
           this.freeDraw = false;
           this.document.sendSyncDocInfo();
@@ -189,7 +191,8 @@ export class DrawtoolService {
 
     this.fabCanvas.on('path:created', (e) => {
       this.logger.debug('path:created event, ', e);
-      (e as any).path.opacity = 0.3;
+      if(this.selectedTool === DrawtoolType.free)
+          (e as any).path.opacity = 0.3;
     });
 
     this.fabCanvas.on('object:added', (e) => {
@@ -296,6 +299,14 @@ export class DrawtoolService {
     this.updataCanvasTool();
   }
 
+  setDrawPath() {
+    this.recoverCanvas();
+    this.fabCanvas.isDrawingMode = true;
+    this.selectedTool = DrawtoolType.path;
+
+    this.updataCanvasTool();
+  }
+
   setDrawSelect() {
     this.fabCanvas.isDrawingMode = false;
     this.selectedTool = DrawtoolType.select;
@@ -339,7 +350,7 @@ export class DrawtoolService {
   private updataCanvasTool() {
     if ( this.fabCanvas.isDrawingMode ) {
       this.fabCanvas.freeDrawingBrush.color = this.color;
-      this.fabCanvas.freeDrawingBrush.width = 20;
+      this.fabCanvas.freeDrawingBrush.width = this.lineWeight;
     }
   }
 }
