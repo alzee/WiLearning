@@ -21,5 +21,5 @@ import { NavComponent } from './nav/nav.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Orcasmart Meeting Admin';
+  title = 'Orca Meeting Admin';
 }
