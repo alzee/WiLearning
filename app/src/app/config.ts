@@ -15,15 +15,15 @@
 import { environment } from '../environments/environment';
 
 export const MediaServer = {
-  address: 'rtc.liweix.com',
+  address: 'meeting.orcasmart.com',
 };
 
 export const AdminServer = {
-  address: 'rtc.liweix.com',
+  address: 'meeting.orcasmart.com',
 };
 
 export const DocServer = {
-  address: 'rtc.liweix.com'
+  address: 'meeting.orcasmart.com'
 };
 
 export const RequestConnectVideoTimeout = 60;

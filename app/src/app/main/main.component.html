@@ -8,22 +8,19 @@
             <ion-segment-button value="member" id="memberButton">
               <ion-label>{{i18n.lang.member}}：{{peer.peersInfo.length}}</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="chat" id="chatButton">
-              <ion-label>{{i18n.lang.chat}}</ion-label>
-            </ion-segment-button>
           </ion-segment>
         </ion-toolbar>
       </ion-header>
 
       <ion-content>
-        <app-member *ngIf="menuPage==='member'"></app-member>
-        <app-chat *ngIf="menuPage==='chat'"></app-chat>
+        <app-member></app-member>
+        <app-chat></app-chat>
         <ng-container *ngFor="let p of peer.peersInfo">
           <audio [srcObject]="p.camStream" autoplay *ngIf="peer.isEnableMic(p)"></audio>
         </ng-container>
       </ion-content>
 
-      <ion-footer *ngIf="menuPage==='chat'">
+      <ion-footer>
         <ion-toolbar>
           <ion-buttons>
             <ion-textarea [placeholder]="i18n.lang.inputMessage"

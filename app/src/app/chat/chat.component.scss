@@ -35,3 +35,10 @@ ion-content {
     justify-content: center;
     align-items: flex-end;
 }
+
+.chat-list{
+    height: 70%;
+    overflow: auto;
+    overflow-x: hidden;
+    border-top: 3px solid #cfcfcf;
+}

@@ -1,4 +1,4 @@
-  <ion-list lines="none">
+  <ion-list class="member-list" lines="none">
     <ion-menu-toggle autoHide="false">
       <ng-container *ngFor="let p of peer.peersInfo">
         <ion-item *ngIf="peer.isEnableCamera(p) && p.camStream.toggleSide">
