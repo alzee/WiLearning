@@ -6,7 +6,8 @@
         <ion-toolbar [color]="profile.color">
           <ion-segment (ionChange)="segmentChanged($event)">
             <ion-segment-button value="member" id="memberButton">
-              <ion-label>{{i18n.lang.member}}：{{peer.peersInfo.length}}</ion-label>
+              <!--jack change the member font color to be white 12-11-2020-->
+              <ion-label><p style="color:snow !important">{{i18n.lang.member}}：{{peer.peersInfo.length}}</p>
             </ion-segment-button>
           </ion-segment>
         </ion-toolbar>

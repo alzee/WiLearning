@@ -61,7 +61,7 @@ export class I18nService {
     audioRecvRate: 'Audio Receive',
     audioSendRate: 'Audio Send',
 
-    setAsPresenter: 'Set As Host',
+    setAsPresenter: 'Host Login',
     darkTheme: 'Dark Theme',
 
     chinese: 'Chinese',
