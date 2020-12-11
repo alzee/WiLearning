@@ -19,9 +19,9 @@ import { Injectable } from '@angular/core';
 })
 export class I18nService {
   public en = {
-    username: 'nickname',
-    password: 'login password',
-    roomid: 'roomid',
+    username: 'Nickname',
+    password: 'Login password',
+    roomid: 'Roomid',
     userLogin: 'User Login',
     login: 'Login',
     inputUsername: 'Please input your username',
@@ -29,11 +29,11 @@ export class I18nService {
     inputPassword: 'Please input your password(3-10)',
     inputPresenterPassword: 'Please input presenter password.',
 
-    welcome: 'Welcome',
+    welcome: 'Welcome Orca Meeting',
     welcomePrompt: 'Presenter has more privileges.',
 
     chat: 'Chat',
-    member: 'Member',
+    member: 'Orca Member',
     mutedAll: 'Muted All',
     inputMessage: 'Please enter the message and press Enter to send.',
     sendTo: 'Send to',
@@ -61,7 +61,7 @@ export class I18nService {
     audioRecvRate: 'Audio Receive',
     audioSendRate: 'Audio Send',
 
-    setAsPresenter: 'Set As Presenter',
+    setAsPresenter: 'Set As Host',
     darkTheme: 'Dark Theme',
 
     chinese: 'Chinese',
