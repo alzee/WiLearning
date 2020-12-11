@@ -15,7 +15,7 @@
 import { Injectable } from '@angular/core';
 import debug from 'debug';
 
-const APP_NAME = 'WiLearning';
+const APP_NAME = 'Orca Meeting';
 localStorage.debug = 'mediasoup-client:* WiLearning:*';
 
 @Injectable({

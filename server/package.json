@@ -7,7 +7,7 @@
     "pack": "webpack"
   },
   "private": true,
-  "description": "WiLearning is a dedicated cloud for telecommuting and video conferencing, born for privacy and security.",
+  "description": "Orca Meeting is a dedicated cloud for telecommuting and video conferencing, born for privacy and security.",
   "author": "liwei<bjliwei@qq.com>",
   "license": "AGPL",
   "main": "server.ts",
