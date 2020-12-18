@@ -2,9 +2,9 @@
   <div class="app-login">
 
   <div  class="login-logo" style="width: 375px;">
-    <img src="assets/img/orca-logo.png" alt="Orca meeting Logo">
+    <img src="assets/img/orca-logo.png" alt="Orca Conference Logo">
   </div>
-  <div style="width: 375px; font-size:24px; font-weight: 500; text-align: center;">Orca Meeting {{i18n.lang.userLogin}}</div>
+  <div style="width: 375px; font-size:28px; font-weight: 500; text-align: center;">Orca Conference {{i18n.lang.userLogin}}</div>
 
   <form #loginForm="ngForm" novalidate style="width: 375px;">
     <ion-list>
@@ -45,13 +45,30 @@
         </p>
       </ion-text>
     </ion-list>
-
+    
     <ion-row>
       <ion-col>
         <ion-button (click)="onLogin(loginForm)" type="submit" expand="block" [disabled]="!loginForm.valid">{{i18n.lang.login}}</ion-button>
       </ion-col>
+      <ion-col>
+        <ion-button (click)="onLogup()" type="submit" expand="block" >Sign UP</ion-button>
+      </ion-col>
     </ion-row>
+    <br />    
+    <div style="width: 375px; font-size:16px; font-weight: 400; text-align: center;">
+      New to Orca conference? Sign Up Free.
+    </div>
+
+    <br />    <br />    <br />
+    <div style="width: 375px; font-size:12px; font-weight: 200; text-align: center;">
+      By signing in, I agree to the <a href="https://packaging.orcasmart.com/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://packaging.orcasmart.com/terms-conditions" target="_blank">Security</a>.
+    </div>
+    
   </form>
 
+  <br />
+  <div style="width: 375px; font-size:14px; font-weight: 400; text-align: center;">
+    @ 2020 Orca Conference rev 12.18.2020.38226
+  </div>
   </div>
 </ion-content>

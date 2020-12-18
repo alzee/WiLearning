@@ -19,9 +19,9 @@ import { Injectable } from '@angular/core';
 })
 export class I18nService {
   public en = {
-    username: 'Nickname',
-    password: 'Login password',
-    roomid: 'Roomid',
+    username: 'Your Name',
+    password: 'Password',
+    roomid: 'Room ID',
     userLogin: 'User Login',
     login: 'Login',
     inputUsername: 'Please input your username',
@@ -29,8 +29,8 @@ export class I18nService {
     inputPassword: 'Please input your password(3-10)',
     inputPresenterPassword: 'Please input presenter password.',
 
-    welcome: 'Welcome Orca Meeting',
-    welcomePrompt: 'Presenter has more privileges.',
+    welcome: 'Welcome Orca Conference',
+    welcomePrompt: 'If you are the Host, Please Login',
 
     chat: 'Chat',
     member: 'Orca Member',

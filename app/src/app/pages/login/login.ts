@@ -81,6 +81,22 @@ export class LoginPage {
     }
   }
 
+  
+  onLogup() {        
+    this.signupdialog();
+  }
+
+  async signupdialog() {    
+    const alertDialog = await this.alert.create({
+        header: "Information",
+        message: "Currently registration requires user authentication, please email:Jack@orcasmart.com to apply for an new account.Thanks",
+        buttons: [this.i18n.lang.ok]
+      });
+    await alertDialog.present();
+  }
+
+
+
   async loginError(error) {
     let errorMessage = this.i18n.lang.unKnownError;
     if (error.error && error.error.code === 40411) {
