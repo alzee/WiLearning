@@ -5,6 +5,7 @@
           <app-videoplayer [stream]="p.camStream" ></app-videoplayer>
         </ion-item>
       </ng-container>
+      
       <ng-container *ngFor="let p of peer.peersInfo">
         <ion-item *ngIf="peer.isEnableCamera(p) && !p.camStream.toggleSide">
           <ion-label>{{p.displayName}}</ion-label>

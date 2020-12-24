@@ -32,8 +32,10 @@ export enum DrawtoolType {
   providedIn: 'root'
 })
 export class DrawtoolService {
-  color = 'red';
-  lineWeight = 1;
+  //color = 'red';
+  //lineWeight = 1;
+  color = 'black';
+  lineWeight = 3;
   shape: string;
   fontSize: 50;
   fontFamily: 'Arial';

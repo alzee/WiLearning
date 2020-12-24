@@ -64,7 +64,7 @@
              <!-- jack change the icon in the meeting room. 12-11-2020 -->              
               <img src="assets/img/appicon.png" alt="Orca Conference Logo" width="32" height="32">              
             </ion-button>
-            <ion-label><p style="font-size: 16px; color:snow !important">&nbsp;&nbsp;Orca Conference. Rev 12.18.2020.38226&nbsp;&nbsp; </p></ion-label>
+            <ion-label><p style="font-size: 16px; color:snow !important">&nbsp;&nbsp;Orca Conference. Rev 12.24.2020.38226&nbsp;&nbsp; </p></ion-label>
             <ion-title>{{classroom.timeElapsed}}</ion-title>
           </ion-buttons>
           <ion-buttons slot="end">
@@ -94,28 +94,33 @@
       </ion-content>
       <ion-footer class="ion-no-border">
         <ion-toolbar>
-           <ion-buttons class="ion-justify-content-around"> 
+           <ion-buttons class="ion-justify-content-around" style="text-align: center !important; border-top-style: solid;border-top-color: gray;border-width: 2px; padding: 10px 0px 0 0;"> 
             <ion-label *ngIf="!peer.isEnableCamera(profile.me)" (click)="produceLocalCamera()">
-              <ion-icon slot="icon-only" src="assets/img/videocam-off.svg"></ion-icon>  
+              <!-- <ion-icon slot="icon-only" src="assets/img/videocam-off.png"></ion-icon>     -->
+              <img src="assets/img/videocam-off.png" style="max-width:30px;cursor: pointer;">            
               <p style="color:gray !important">Video OFF </p>            
             </ion-label>
 
             <ion-label *ngIf="peer.isEnableCamera(profile.me)" (click)="peer.stopLocalCamera()" >
-              <ion-icon slot="icon-only" name="videocam"></ion-icon>
+              <!-- <ion-icon slot="icon-only" name="videocam"></ion-icon> Jack change for the gif-->              
+              <img src="assets/img/videocam-on.gif" style="max-width:30px;cursor: pointer;">
               <p style="color:green !important">Video ON </p>              
             </ion-label>
 
             <ion-label *ngIf="!peer.isEnableMic(profile.me)" (click)="produceLocalMic()">
-              <ion-icon slot="icon-only" name="mic-off"></ion-icon>     
+              <!--<ion-icon slot="icon-only" name="mic-off"></ion-icon> -->
+              <img src="assets/img/microphone-off.png" style="max-width:30px;cursor: pointer;">
               <p style="color:gray !important">Mic OFF </p>         
             </ion-label>
             
             <ion-label *ngIf="peer.isEnableMic(profile.me)" (click)="peer.stopLocalMic()">
-              <ion-icon slot="icon-only" name="mic"></ion-icon><p style="color:green !important">Mic ON </p>
+              <!-- <ion-icon slot="icon-only" name="mic"></ion-icon> -->              
+              <img src="assets/img/microphone-on.gif" style="max-width:30px;cursor: pointer;">
+              <p style="color:green !important">Mic ON </p>
             </ion-label>
 
             <ion-label class="" (click)="sharePopover($event)" *ngIf="profile.privilege.classControl">
-              <ion-icon slot="icon-only" name="share"></ion-icon>       
+              <ion-icon slot="icon-only" name="share" style="max-width:30px;cursor: pointer;"></ion-icon>       
               <p style="color:black !important">Share</p>     
             </ion-label>
             
@@ -128,24 +133,24 @@
             </ion-button>
           -->
             <ion-label (click)="settingPopover()">
-              <ion-icon slot="icon-only" name="settings"></ion-icon>   
+              <ion-icon slot="icon-only" name="settings" style="max-width:30px;cursor: pointer;"></ion-icon>   
               <p style="color:black !important">Setting</p>           
             </ion-label>
             
 
             <ion-label (click)="morePopover($event)">
-              <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>     
+              <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical" style="max-width:30px;cursor: pointer;"></ion-icon>     
               <p style="color:black !important">More</p>         
             </ion-label>
             
 
-            <ion-button color="primary" 
+            <ion-button color="primary" style="cursor: pointer;"
               (click)="classroom.startClass()" 
               *ngIf="!classroom.started && profile.privilege.classControl">
               {{i18n.lang.start}}
             </ion-button>
 
-            <ion-button color="primary" (click)="classroom.stopClass()" *ngIf="classroom.started && profile.privilege.classControl">
+            <ion-button style="cursor: pointer;" color="primary" (click)="classroom.stopClass()" *ngIf="classroom.started && profile.privilege.classControl">
               {{i18n.lang.stop}}
             </ion-button>
            </ion-buttons> 

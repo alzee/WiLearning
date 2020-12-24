@@ -36,7 +36,7 @@ export class I18nService {
     member: 'Orca Member',
     mutedAll: 'Muted All',
     inputMessage: 'Please enter the message and press Enter to send.',
-    sendTo: 'Send to',
+    sendTo: ' Send to',
     all: 'All',
     send: 'Send',
     start: 'Start',

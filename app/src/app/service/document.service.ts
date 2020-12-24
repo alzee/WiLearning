@@ -331,7 +331,9 @@ export class DocumentService {
       page.page = 2;
       whiteboard.pages.push(page);
     } else {
-      const filename = '白板';
+      //const filename = '白板';
+      const filename = 'WhiteBoard';
+      whiteboard
       whiteboard = new WlDocs(filename);
       whiteboard.uploadTime = Date.now().toString();
       whiteboard.numPages = 1;

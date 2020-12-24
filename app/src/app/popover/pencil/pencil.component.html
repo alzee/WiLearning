@@ -2,7 +2,7 @@
   <ng-container *ngIf="prop === 'color'">
     <ion-item button (click)="setColor('red')">
       <div class="color_red"></div>
-    </ion-item>
+    </ion-item>    
     <ion-item button (click)="setColor('black')">
       <div class="color_black"></div>
     </ion-item>
@@ -17,9 +17,12 @@
     </ion-item>
   </ng-container>
 
-  <ng-container *ngIf="prop === 'lineweight'">
+  <ng-container *ngIf="prop === 'lineweight'">    
     <ion-item button (click)="setLineWeight(1)">
       <div class="lineweight_1"></div>
+    </ion-item>
+    <ion-item button (click)="setLineWeight(3)">
+      <div class="lineweight_3"></div>
     </ion-item>
     <ion-item button (click)="setLineWeight(5)">
       <div class="lineweight_5"></div>

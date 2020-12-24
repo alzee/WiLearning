@@ -13,15 +13,15 @@
     </ion-button>
   </ion-item>
   <ion-item color="none">
+    <ion-button (click)="drawtool.setDrawPath()" [color]="drawtoolButton(drawtoolType.path)">
+      <ion-icon name="pencil"></ion-icon>
+    </ion-button>
     <ion-button (click)="drawtool.setDrawLine()" [color]="drawtoolButton(drawtoolType.line)">
       <ion-icon name="remove"></ion-icon>
     </ion-button>
     <ion-button (click)="drawtool.setDrawRect()" [color]="drawtoolButton(drawtoolType.rect)">
       <ion-icon name="square-outline"></ion-icon>
-    </ion-button>
-    <ion-button (click)="drawtool.setDrawPath()" [color]="drawtoolButton(drawtoolType.path)">
-      <ion-icon name="pencil-outline"></ion-icon>
-    </ion-button>
+    </ion-button>    
     <ion-button (click)="drawtool.setDrawFree()" [color]="drawtoolButton(drawtoolType.free)">
       <ion-icon name="brush"></ion-icon>
     </ion-button>
