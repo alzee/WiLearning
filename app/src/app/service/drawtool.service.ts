@@ -47,7 +47,7 @@ export class DrawtoolService {
   private selecting = null;
   public document;
 
-  public selectedTool: DrawtoolType = DrawtoolType.line;
+  public selectedTool: DrawtoolType = DrawtoolType.path;
   syncEvent;
 
   constructor(
@@ -81,6 +81,9 @@ export class DrawtoolService {
         break;
       case DrawtoolType.free :
         this.setDrawFree();
+        break;
+      case DrawtoolType.path:
+        this.setDrawPath();
         break;
       default :
         break;
