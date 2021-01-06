@@ -98,8 +98,10 @@ export class DocumentComponent implements OnInit, OnDestroy {
   }
 
   async claInit() {
-    this.width = this.container.nativeElement.clientWidth;
-    this.height = this.container.nativeElement.clientHeight;
+    //this.width = this.container.nativeElement.clientWidth;
+    //this.height = this.container.nativeElement.clientHeight;
+    this.width = 2000;
+    this.height = 2000;
 
     this.canvasEle.nativeElement.width = this.width;
     this.canvasEle.nativeElement.height = this.height;
@@ -221,6 +223,6 @@ export class DocumentComponent implements OnInit, OnDestroy {
     fabric.Object.prototype.hasControls = false;
 
     this.fabCanvas = new fabric.Canvas(this.canvasEle.nativeElement);
-    this.fabCanvas.setBackgroundColor('white', null);
+    this.fabCanvas.setBackgroundColor(null, null);
   }
 }
