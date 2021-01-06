@@ -82,7 +82,7 @@
       </ion-header>
       <ion-content class="ion-justify-content-center">
         <app-mainvideo *ngIf="profile.boardComponent===boardcomp.video"></app-mainvideo>
-        <app-sharedesk *ngIf="profile.boardComponent===boardcomp.sharescreen"></app-sharedesk>
+        <app-sharedesk *ngIf="profile.boardComponent===boardcomp.document || profile.boardComponent===boardcomp.sharescreen"></app-sharedesk>
         <app-sharemedia *ngIf="profile.boardComponent===boardcomp.sharemedia"></app-sharemedia>
         <app-document *ngIf="profile.boardComponent===boardcomp.document || profile.boardComponent===boardcomp.sharescreen"></app-document>
         <div *ngIf="(profile.boardComponent===boardcomp.document|| profile.boardComponent===boardcomp.sharescreen) && profile.privilege.classControl" slot="fixed" class="drawtoolbar">
