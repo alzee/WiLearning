@@ -88,3 +88,13 @@ ion-menu.ios ion-item.selected ion-icon {
   left: 0;
   height: 40px;
 }
+.main-btns{
+  padding: 10px;
+  ion-button{
+    width: auto !important;
+    height: auto !important;
+    p{
+      margin: 0;
+    }
+  }
+}

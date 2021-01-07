@@ -94,35 +94,46 @@
       </ion-content>
       <ion-footer class="ion-no-border">
         <ion-toolbar>
-           <ion-buttons class="ion-justify-content-around" style="text-align: center !important; border-top-style: solid;border-top-color: gray;border-width: 2px; padding: 10px 0px 0 0;"> 
-            <ion-label *ngIf="!peer.isEnableCamera(profile.me)" (click)="produceLocalCamera()">
-              <!-- <ion-icon slot="icon-only" src="assets/img/videocam-off.png"></ion-icon>     -->
-              <img src="assets/img/videocam-off.png" style="max-width:30px;cursor: pointer;">            
-              <p style="color:gray !important">Video OFF </p>            
-            </ion-label>
+           <ion-buttons class="ion-justify-content-around main-btns" style="text-align: center !important; border-top-style: solid;border-top-color: gray;border-width: 2px;"> 
+            <ion-button *ngIf="!peer.isEnableCamera(profile.me)" (click)="produceLocalCamera();videoBtn.disabled=true" #videoBtn>
+              <div>
+                <!-- <ion-icon slot="icon-only" src="assets/img/videocam-off.png"></ion-icon>     -->
+                <img src="assets/img/videocam-off.png" style="max-width:30px;cursor: pointer;">            
+                <p style="color:gray !important">Video OFF </p>            
+              </div>
+            </ion-button>
 
-            <ion-label *ngIf="peer.isEnableCamera(profile.me)" (click)="peer.stopLocalCamera()" >
+            <ion-button *ngIf="peer.isEnableCamera(profile.me)" (click)="peer.stopLocalCamera();videoBtn.disabled=false" >
+              <div>
+                <!-- <ion-icon slot="icon-only" name="videocam"></ion-icon> Jack change for the gif-->              
+                <img src="assets/img/videocam-on.gif" style="max-width:30px;cursor: pointer;">
+                <p style="color:green !important">Video ON </p>              
+              </div>
               <!-- <ion-icon slot="icon-only" name="videocam"></ion-icon> Jack change for the gif-->              
-              <img src="assets/img/videocam-on.gif" style="max-width:30px;cursor: pointer;">
-              <p style="color:green !important">Video ON </p>              
-            </ion-label>
+            </ion-button>
 
-            <ion-label *ngIf="!peer.isEnableMic(profile.me)" (click)="produceLocalMic()">
-              <!--<ion-icon slot="icon-only" name="mic-off"></ion-icon> -->
-              <img src="assets/img/microphone-off.png" style="max-width:30px;cursor: pointer;">
-              <p style="color:gray !important">Mic OFF </p>         
-            </ion-label>
+            <ion-button *ngIf="!peer.isEnableMic(profile.me)" (click)="produceLocalMic();micBtn.disabled = true" #micBtn>
+              <div>
+                <!--<ion-icon slot="icon-only" name="mic-off"></ion-icon> -->
+                <img src="assets/img/microphone-off.png" style="max-width:30px;cursor: pointer;">
+                <p style="color:gray !important">Mic OFF </p>         
+              </div>
+            </ion-button>
             
-            <ion-label *ngIf="peer.isEnableMic(profile.me)" (click)="peer.stopLocalMic()">
-              <!-- <ion-icon slot="icon-only" name="mic"></ion-icon> -->              
-              <img src="assets/img/microphone-on.gif" style="max-width:30px;cursor: pointer;">
-              <p style="color:green !important">Mic ON </p>
-            </ion-label>
+            <ion-button *ngIf="peer.isEnableMic(profile.me)" (click)="peer.stopLocalMic();micBtn.disabled=fasle">
+              <div>
+                <!-- <ion-icon slot="icon-only" name="mic"></ion-icon> -->              
+                <img src="assets/img/microphone-on.gif" style="max-width:30px;cursor: pointer;">
+                <p style="color:green !important">Mic ON </p>
+              </div>
+            </ion-button>
 
-            <ion-label class="" (click)="sharePopover($event)" *ngIf="profile.privilege.classControl">
-              <ion-icon slot="icon-only" name="share" style="max-width:30px;cursor: pointer;"></ion-icon>       
-              <p style="color:black !important">Share</p>     
-            </ion-label>
+            <ion-button class="" (click)="sharePopover($event)" *ngIf="profile.privilege.classControl">
+              <div>
+                <ion-icon slot="icon-only" name="share" style="max-width:30px;cursor: pointer;"></ion-icon>       
+                <p style="color:black !important">Share</p>     
+              </div>
+            </ion-button>
             
         <!-- Jack hide bcause we always to open the chat and vedio . 12-10-2020
             <ion-button (click)="openMember()">
@@ -132,16 +143,20 @@
               <ion-icon  slot="icon-only" name="chatbox-ellipses"></ion-icon>
             </ion-button>
           -->
-            <ion-label (click)="settingPopover()">
-              <ion-icon slot="icon-only" name="settings" style="max-width:30px;cursor: pointer;"></ion-icon>   
-              <p style="color:black !important">Setting</p>           
-            </ion-label>
+            <ion-button (click)="settingPopover()">
+              <div>
+                <ion-icon slot="icon-only" name="settings" style="max-width:30px;cursor: pointer;"></ion-icon>   
+                <p style="color:black !important">Setting</p>           
+              </div>
+            </ion-button>
             
 
-            <ion-label (click)="morePopover($event)">
-              <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical" style="max-width:30px;cursor: pointer;"></ion-icon>     
-              <p style="color:black !important">More</p>         
-            </ion-label>
+            <ion-button (click)="morePopover($event)">
+              <div>
+                <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical" style="max-width:30px;cursor: pointer;"></ion-icon>     
+                <p style="color:black !important">More</p>         
+              </div>
+            </ion-button>
             
 
             <ion-button color="primary" style="cursor: pointer;"
