@@ -7,6 +7,7 @@ import { AlertController } from '@ionic/angular';
 import { AuthService } from '../../service/auth.service';
 import { PeerService } from '../../service/peer.service';
 import { ClassroomService } from '../../service/classroom.service';
+import { DrawtoolService } from '../../service/drawtool.service';
 
 @Component({
   selector: 'app-more',
@@ -14,10 +15,10 @@ import { ClassroomService } from '../../service/classroom.service';
   styleUrls: ['./more.component.scss'],
 })
 export class MoreComponent implements OnInit {
-
   chinese;
   mutedAll = false;
   constructor(
+    public drawtool: DrawtoolService,
     public profile: ProfileService,
     public i18n: I18nService,
     private eventbus: EventbusService,
@@ -102,5 +103,6 @@ export class MoreComponent implements OnInit {
   async dropPresenter() {
       this.closeWindow();
       this.peer.dropPresenter();
+      this.drawtool.recoverCanvas();
   }
 }
