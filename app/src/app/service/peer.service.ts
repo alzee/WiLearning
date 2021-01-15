@@ -829,6 +829,8 @@ export class PeerService {
   async setAsPresenter() {
     await this.signaling.sendChangeRoler(ROLE.MASTER);
     this.profile.setRoler(ROLE.MASTER);
+    this.profile.switchBoardComponent(WlBoardComp.welcome);
+    this.signaling.sendSwitchComponent(WlBoardComp.welcome);
   }
 
   async dropPresenter() {
