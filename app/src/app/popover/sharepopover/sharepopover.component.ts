@@ -27,6 +27,7 @@ export class SharepopoverComponent implements OnInit {
     this.profile.switchBoardComponent(WlBoardComp.video);
     this.closeWindow();
     this.signaling.sendSwitchComponent(WlBoardComp.video);
+    this.peer.stopScreenShare();
   }
 
   async shareDesktop() {
@@ -44,12 +45,14 @@ export class SharepopoverComponent implements OnInit {
     this.profile.switchBoardComponent(WlBoardComp.sharemedia);
     this.closeWindow();
     this.signaling.sendSwitchComponent(WlBoardComp.sharemedia);
+    this.peer.stopScreenShare();
   }
 
   openDocument() {
     this.profile.switchBoardComponent(WlBoardComp.document);
     this.closeWindow();
     this.signaling.sendSwitchComponent(WlBoardComp.document);
+    this.peer.stopScreenShare();
   }
 
   closeWindow() {
