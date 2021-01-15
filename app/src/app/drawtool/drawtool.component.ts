@@ -5,6 +5,8 @@ import { PencilComponent } from '../popover/pencil/pencil.component';
 import { DrawtoolService, DrawtoolType } from '../service/drawtool.service';
 import { DocselectComponent } from '../popover/docselect/docselect.component';
 import { EventbusService, IEventType, EventType } from '../service/eventbus.service';
+import { ProfileService } from '../service/profile.service';
+import { WlBoardComp } from '../defines';
 
 @Component({
   selector: 'app-drawtool',
@@ -15,8 +17,10 @@ export class DrawtoolComponent implements OnInit {
   popoverPencil;
   drawtoolType = DrawtoolType;
   popoverDocselect;
+  boardcomp = WlBoardComp;
 
   constructor(
+    public profile: ProfileService,
     public drawtool: DrawtoolService,
     private logger: LoggerService,
     private popoverController: PopoverController,
