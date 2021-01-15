@@ -387,6 +387,10 @@ export class PeerService {
     return peer.camStream && peer.camStream.audioConsumer && !peer.camStream.audioConsumer.closed;
   }
 
+  public isScreenStreming(peer: WlPeer) {
+    return peer.screenStream;
+  }
+
   private peerClosed(data: any) {
     const { peerId } = data;
     this.peersInfo = this.peersInfo.filter(p =>  p.id !== peerId);
