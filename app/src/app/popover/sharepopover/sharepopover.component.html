@@ -1,6 +1,6 @@
 
 <ion-list>
-  <ion-item button (click)="shareDesktop()" *ngIf="profile.privilege.shareDesktop">
+  <ion-item button (click)="shareDesktop()">
     <ion-icon name="desktop"></ion-icon>
     <ion-label class="ion-padding-start">
       {{i18n.lang.shareScreen}}
@@ -18,7 +18,7 @@
       {{i18n.lang.document}}
     </ion-label>
   </ion-item>
-  <ion-item button (click)="openVideo()">
+  <ion-item button (click)="openVideo()" *ngIf="profile.privilege.classControl">
     <ion-icon name="videocam"></ion-icon>
     <ion-label class="ion-padding-start">
       {{i18n.lang.mainVideo}}

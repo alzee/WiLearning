@@ -128,11 +128,8 @@
               </div>
             </ion-button>
 
-            <ion-button class="" (click)="sharePopover($event)" *ngIf="profile.privilege.classControl">
-              <div>
-                <ion-icon slot="icon-only" name="share" style="max-width:30px;cursor: pointer;"></ion-icon>       
-                <p style="color:black !important">Share</p>     
-              </div>
+            <ion-button class="" (click)="sharePopover($event)">
+              <ion-icon slot="icon-only" name="share"></ion-icon>
             </ion-button>
             
         <!-- Jack hide bcause we always to open the chat and vedio . 12-10-2020
