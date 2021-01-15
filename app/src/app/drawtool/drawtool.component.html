@@ -31,10 +31,13 @@
     <ion-button (click)="drawtool.setDrawSelect()" [color]="drawtoolButton(drawtoolType.select)">
       <ion-icon name="hand-left"></ion-icon>
     </ion-button>
-  </ion-item>
-  <ion-item color="none">
     <ion-button (click)="drawtool.delObject()" color="light">
       <ion-icon name="trash"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-item color="none">
+    <ion-button (click)="drawtool.delAll()" color="light">
+      <ion-icon name="trash-bin-sharp"></ion-icon>
     </ion-button>
   </ion-item>
 </div>

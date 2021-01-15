@@ -327,6 +327,13 @@ export class DrawtoolService {
     });
   }
 
+  delAll() {
+    let objects = this.fabCanvas.getObjects();
+    objects.forEach(object => {
+      this.fabCanvas.remove(object);
+    });
+  }
+
   delObject() {
     if ( this.selectedTool !== DrawtoolType.select) {
       return;
