@@ -1,5 +1,5 @@
 <div class="container">
-  <ion-item slot="start" color="none">
+  <ion-item slot="start" color="none" *ngIf="profile.boardComponent===boardcomp.document">
     <ion-button color='light' (click)="openDocSelect($event)">
       <ion-icon name="documents"></ion-icon>
     </ion-button>
