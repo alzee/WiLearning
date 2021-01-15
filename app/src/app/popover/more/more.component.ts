@@ -98,4 +98,9 @@ export class MoreComponent implements OnInit {
 
     });
   }
+
+  async dropPresenter() {
+      this.closeWindow();
+      this.peer.dropPresenter();
+  }
 }

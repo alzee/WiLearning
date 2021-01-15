@@ -14,4 +14,7 @@
   <ion-item button (click)="setAsPrompt()" *ngIf="profile.me.roler !== 1">
     <ion-label>{{i18n.lang.setAsPresenter}}</ion-label>
   </ion-item>
+  <ion-item button (click)="dropPresenter()" *ngIf="profile.me.roler == 1">
+    <ion-label>Drop Presenter</ion-label>
+  </ion-item>
 </ion-list>
